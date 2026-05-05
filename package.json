@@ -1,0 +1,16 @@
+{
+  "name": "ksaaccessibility-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install --prefix client && npm install --prefix server",
+    "dev:client": "npm run dev --prefix client -- --port 3100",
+    "dev:server": "npm run dev --prefix server",
+    "build:client": "npm run build --prefix client",
+    "build:server": "npm run build --prefix server",
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
